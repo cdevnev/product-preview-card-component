@@ -18,10 +18,17 @@ font-family: 'Fraunces', serif;
 - Very dark blue: hsl(212, 21%, 14%)
 - Dark grayish blue: hsl(228, 12%, 48%)
 - White: hsl(0, 0%, 100%)
+*/
 
- */
 
-
+/* Variables & Boilerplate */
+:root {
+    --Cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+    --GrayBlue: hsl(228, 12%, 48%);
+    --DarkBlue: hsl(212, 21%, 14%);
+}
 
 * {
     margin: 0;
@@ -36,4 +43,17 @@ html {
 img {
     max-width: 100%;
     display: block;
+}
+
+
+/* Utility Classes */
+.flex {display: flex;}
+.flex-row {flex-flow: row nowrap;}
+.flex-column {flex-flow: column nowrap;}
+
+
+/* Start */
+
+main * + * {     /* this adds 1em top margin on each element within main */
+    margin-top: 1em;
 }
