@@ -8,16 +8,6 @@ font-family: 'Montserrat', sans-serif;
 
 font-family: 'Fraunces', serif;
 - Weights: 700
-
-### Colors
-### Primary
-- Dark cyan: hsl(158, 36%, 37%)
-- Cream: hsl(30, 38%, 92%)
-
-### Neutral
-- Very dark blue: hsl(212, 21%, 14%)
-- Dark grayish blue: hsl(228, 12%, 48%)
-- White: hsl(0, 0%, 100%)
 */
 
 
@@ -30,6 +20,15 @@ font-family: 'Fraunces', serif;
     --DarkBlue: hsl(212, 21%, 14%);
 }
 
+/* Utility Classes */
+.flex {display: flex;}
+.flex-row {flex-flow: row nowrap;}
+.flex-column {flex-flow: column nowrap;}
+.main-text {font-family: 'Montserrat', sans-serif;}
+.accent-text {font-family: 'Fraunces', serif;}
+.main-color {color: var(--GrayBlue);}
+
+/* Boilerplate */
 * {
     margin: 0;
     padding: 0;
@@ -46,14 +45,8 @@ img {
 }
 
 
-/* Utility Classes */
-.flex {display: flex;}
-.flex-row {flex-flow: row nowrap;}
-.flex-column {flex-flow: column nowrap;}
-
-
 /* Start */
 
-main * + * {     /* this adds 1em top margin on each element within main */
+main * + * :not(.pricing) {     /* this adds 1em top margin on adjacent elements within main, excluding .pricing */
     margin-top: 1em;
 }
