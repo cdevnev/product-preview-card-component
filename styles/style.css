@@ -32,3 +32,8 @@ font-family: 'Fraunces', serif;
 html {
     height: 100%;
 }
+
+img {
+    max-width: 100%;
+    display: block;
+}
